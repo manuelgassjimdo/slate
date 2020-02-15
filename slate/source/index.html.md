@@ -8,7 +8,7 @@ language_tabs: # must be one of https://git.io/vQNgJ
   - javascript
 
 toc_footers:
-  - <a href='#'>Sign Up for a Developer Key</a>
+  - <a href='#'>Get a Developer Key</a>
   - <a href='https://github.com/slatedocs/slate'>Documentation Powered by Slate</a>
 
 includes:
@@ -17,13 +17,16 @@ includes:
 search: true
 ---
 
-# Introduction
+# API Reference
 
-Welcome to the **Business Platform API documentation** from **Jimdo**. Within this documentation you will find a comprehensive description on how to interact with our various API endpoints, that you can ultimately use our shared services to generate value to your users.
+Welcome to the **Business Platform API documentation** at **Jimdo**. Within this documentation you will find a comprehensive description on how to interact with our various API endpoints, that you can ultimately use our shared services to generate value to your users.
 
-We have language bindings in Shell, Ruby, Python, and JavaScript! You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.
+The Business Platform API is organized around **[Apache Thrift](https://en.wikipedia.org/wiki/Apache_Thrift)**. Thrift’s rapid binary serialization and countless languages makes it a solid standard as interface language for company wide usage. 
 
-This example API documentation page was created with [Slate](https://github.com/slatedocs/slate). Feel free to edit it and use it as a base for your own API's documentation.
+Our API supports multiple protocols like binary protocol, JSON or XML. It uses standard HTTP response codes, authentication, and verbs.
+
+We have language bindings in Shell, Ruby, Python, and JavaScript! You can view code examples in the dark boxes to the right, and you can switch the programming language of the examples with the tabs in the top right.
+
 
 # Authentication
 
@@ -53,7 +56,7 @@ const kittn = require('manuel');
 let api = kittn.authorize('meowmeowmeow');
 ```
 
-> Make sure to replace `meowmeowmeow` with your API key.
+
 
 Kittn uses API keys to allow access to the API. You can register a new Kittn API key at our [developer portal](http://example.com/developers).
 
@@ -68,6 +71,8 @@ You must replace <code>meowmeowmeow</code> with your personal API key.
 # Kittens
 
 ## Get All Kittens
+
+> CHARGE ALL KITTENS WITH MILK:
 
 ```ruby
 require 'kittn'
@@ -95,7 +100,7 @@ let api = kittn.authorize('meowmeowmeow');
 let kittens = api.kittens.get();
 ```
 
-> The above command returns JSON structured like this:
+> Response:
 
 ```json
 [
@@ -134,6 +139,8 @@ Remember — a happy kitten is an authenticated kitten!
 </aside>
 
 ## Get a Specific Kitten
+
+> GET A KITTEN WITH CHARGED MILK:
 
 ```ruby
 require 'kitten'
@@ -188,6 +195,8 @@ Parameter | Description
 ID | The ID of the kitten to retrieve
 
 ## Delete a Specific Kitten
+
+> DELTE A KITTEN WITH CHARGED MILK:
 
 ```ruby
 require 'kittn'

@@ -327,7 +327,8 @@ html, body {
   }
 
   &>h1, &>h2, &>h3, &>h4, &>h5, &>h6, &>p, &>table, &>ul, &>ol, &>aside, &>dl {
-    margin-right: $examples-width;
+    margin-right: $examples-width + 1.5%;
+    margin-left: 5px;
     padding: 0 $main-padding;
     box-sizing: border-box;
     display: block;
@@ -442,6 +443,7 @@ html, body {
   p, li, dt, dd {
     line-height: 1.6;
     margin-top: 0;
+    margin-bottom: 0px
   }
 
   img {
@@ -515,10 +517,13 @@ html, body {
     background-color: $code-bg;
     color: #fff;
 
-    border-radius: 5px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
 
-    margin-right: 5px;
-    margin-left: 3px;
+    margin-right: 8px;
+    margin-left: 0px;
     margin-top: 0px;
     margin-bottom: 0px;
     width: $examples-width;
@@ -530,7 +535,7 @@ html, body {
 
     @extend %right-col;
 
-    &>p { margin: 0; border-radius: 5px;}
+
 
     a {
       color: #fff;
@@ -543,16 +548,31 @@ html, body {
     @extend %code-font;
     padding-top: 2em;
     padding-bottom: 2em;
+    margin-bottom: 10px;
     padding: 2em $main-padding;
   }
 
   blockquote {
-    &>p {
-      border-radius: 5px;
+
+      margin-right: 8px;
+      margin-left: 2.8px;
+      margin-top: 0px;
+      margin-bottom: 0px;
+      width: $examples-width;
+
+      float:right;
+      clear:right;
+
+      box-sizing: border-box;
+
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px;
+      border-bottom-left-radius: 0px;
+      border-bottom-right-radius: 0px;
       background-color: $code-annotation-bg;
       padding: $code-annotation-padding 2em;
       color: #eee;
-    }
+
   }
 }
 
